@@ -20,6 +20,9 @@
 (defpoll clock :interval "1s"
   "date '+%H:%M'")
 
+(defpoll vol :interval "1s"
+  "bash ~/.config/eww/scripts/volume.sh")
+
 ;; =========================
 ;; MAIN BAR
 ;; =========================
@@ -47,14 +50,33 @@
       :class "left"
       :hexpand false
 
-      (button :onclick "playerctl previous" "󰒮")
-      (button :onclick "playerctl play-pause" "󰐎")
-      (button :onclick "playerctl next" "󰒭")
+      (button :onclick "playerctl previous" :hexpand false :vexpand false "󰒮")
+      (button :onclick "playerctl play-pause" :hexpand false :vexpand false "󰐎")
+      (button :onclick "playerctl next" :hexpand false :vexpand false "󰒭")
 
-      (label :text media)
+      ;; (box
+      ;;  :class "media-wrap"
+      ;;  (label :text media))
+
+      (label
+        :text media
+        :xalign 0
+        :wrap false
+        :limit-width 20)
+
+      ;; AUDIO CONTROL
+      (box
+        :class "audio"
+        :spacing 8
+
+        (button
+          :onclick "swaymsg 'exec foot -e ncpamixer'"
+          :hexpand false
+          vol)
+      )
     )
 
-    ;; CENTER CLOCK (NOW BUTTON)
+    ;; CENTER CLOCK
     (box
       :halign "center"
       :hexpand true
@@ -67,18 +89,13 @@
       :class "right"
       :hexpand false
 
-      ;; NETWORK AS BUTTON
       (button
-        :onclick "alacritty -e nmtui"
+        :onclick "swaymsg 'exec nm-connection-editor'"
         net)
 
       (label :text mem)
       (label :text gpu)
       (label :text cpu)
-
-      (button
-        :onclick "swaymsg exit"
-        "󰗼")
 
       (button
         :onclick "systemctl poweroff"
