@@ -1,0 +1,88 @@
+;; =========================
+;; SCRIPTS
+;; =========================
+
+(defpoll cpu :interval "2s"
+  "bash ~/.config/eww/scripts/cpu.sh")
+
+(defpoll mem :interval "2s"
+  "bash ~/.config/eww/scripts/memory.sh")
+
+(defpoll net :interval "5s"
+  "bash ~/.config/eww/scripts/network.sh")
+
+(defpoll media :interval "1s"
+  "bash ~/.config/eww/scripts/media.sh")
+
+(defpoll gpu :interval "2s"
+  "bash ~/.config/eww/scripts/gpu.sh")
+
+(defpoll clock :interval "1s"
+  "date '+%H:%M'")
+
+;; =========================
+;; MAIN BAR
+;; =========================
+
+(defwindow bar
+  :monitor 0
+  :geometry
+  (geometry
+    :x "0%"
+    :y "0%"
+    :width "100%"
+    :height "36px"
+    :anchor "top center")
+
+  :stacking "fg"
+  :exclusive true
+
+  (box
+    :class "bar"
+    :orientation "h"
+    :space-evenly false
+
+    ;; LEFT
+    (box
+      :class "left"
+      :hexpand false
+
+      (button :onclick "playerctl previous" "󰒮")
+      (button :onclick "playerctl play-pause" "󰐎")
+      (button :onclick "playerctl next" "󰒭")
+
+      (label :text media)
+    )
+
+    ;; CENTER CLOCK (NOW BUTTON)
+    (box
+      :halign "center"
+      :hexpand true
+
+      (label :text clock)
+    )
+
+    ;; RIGHT
+    (box
+      :class "right"
+      :hexpand false
+
+      ;; NETWORK AS BUTTON
+      (button
+        :onclick "alacritty -e nmtui"
+        net)
+
+      (label :text mem)
+      (label :text gpu)
+      (label :text cpu)
+
+      (button
+        :onclick "swaymsg exit"
+        "󰗼")
+
+      (button
+        :onclick "systemctl poweroff"
+        "")
+    )
+  )
+)

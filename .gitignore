@@ -1,0 +1,11 @@
+*
+!.gitignore
+
+!eww/**
+!kitty/**
+!lazygit/**
+!nnn/**
+!nvim/**
+!pulse/**
+!rofi/**
+!sway/**

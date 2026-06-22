@@ -1,0 +1,144 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+
+$bg: #141414;
+$accent: #00ff41;
+$border: #3F3F3F;
+$text: #00ff41;
+$alert: #FF0000;
+
+$radius: 5px;
+
+/* transparency helpers */
+$accent_soft: rgba(0, 255, 65, 0.10);
+$accent_med: rgba(0, 255, 65, 0.15);
+$alert_soft: rgba(255, 0, 0, 0.08);
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+
+  color: $text;
+}
+
+/* =========================
+   BAR
+========================= */
+
+.bar {
+  background-color: $bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+
+  padding: 6px 10px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.left,
+.right {
+  background: transparent;
+  padding: 0 8px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: $radius;
+
+  color: $text;
+  padding: 4px 8px;
+}
+
+button:hover {
+  color: $accent;
+  border-color: $accent;
+  background-color: $accent_soft;
+}
+
+button:active {
+  border-color: $accent;
+  background-color: $accent_med;
+}
+
+/* =========================
+   WORKSPACES
+========================= */
+
+.ws {
+  background: transparent;
+  padding: 0 6px;
+}
+
+.ws-normal {
+  color: $text;
+  opacity: 0.6;
+
+  border: 1px solid transparent;
+  border-radius: $radius;
+
+  padding: 2px 6px;
+}
+
+.ws-normal:hover {
+  color: $accent;
+  border-color: $accent;
+  background-color: $accent_soft;
+  opacity: 1;
+}
+
+.ws-focused {
+  color: $accent;
+  font-weight: bold;
+
+  border: 1px solid $accent;
+  background-color: $accent_med;
+
+  border-radius: $radius;
+  padding: 2px 6px;
+}
+
+/* =========================
+   LABELS
+========================= */
+
+label {
+  background: transparent;
+  color: $text;
+  padding: 0 6px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  color: $border;
+  background: transparent;
+  padding: 0 6px;
+}
+
+/* =========================
+   ALERT
+========================= */
+
+.alert {
+  color: $alert;
+  border: 1px solid $alert;
+  background-color: $alert_soft;
+
+  border-radius: $radius;
+  padding: 4px 8px;
+}
