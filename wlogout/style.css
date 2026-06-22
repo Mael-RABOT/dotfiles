@@ -1,0 +1,112 @@
+/* =========================
+   wlogout style.css (eww match)
+========================= */
+
+* {
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    transition: all 120ms ease-in-out;
+
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* =========================
+   WINDOW
+========================= */
+
+window {
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #00ff41;
+    background-color: rgba(20, 20, 20, 0.96);
+
+    border: 1px solid #3F3F3F;
+}
+
+/* =========================
+   BASE BUTTON
+========================= */
+
+button {
+    color: #00ff41;
+    background-color: transparent;
+
+    border: 1px solid #3F3F3F;
+    border-radius: 3px;
+
+    margin: 10px;
+    padding: 18px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    min-width: 120px;
+    min-height: 80px;
+}
+
+/* hover / active (eww-like accent feel) */
+
+button:hover {
+    color: #00ff41;
+    border-color: #00ff41;
+    background-color: rgba(0, 255, 65, 0.10);
+}
+
+button:active {
+    border-color: #00ff41;
+    background-color: rgba(0, 255, 65, 0.15);
+}
+
+/* =========================
+   SPECIAL STATES PER ACTION
+========================= */
+
+/* LOCK */
+#lock:hover,
+#lock:active {
+    color: #00ff41;
+    border-color: #00ff41;
+    background-color: rgba(0, 255, 65, 0.10);
+}
+
+/* LOGOUT */
+#logout:hover,
+#logout:active {
+    color: #FF0000;
+    border-color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.08);
+}
+
+/* SHUTDOWN */
+#shutdown:hover,
+#shutdown:active {
+    color: #FF0000;
+    border-color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.08);
+}
+
+/* REBOOT */
+#reboot:hover,
+#reboot:active {
+    color: #FF0000;
+    border-color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.08);
+}
+
+/* SUSPEND */
+#suspend:hover,
+#suspend:active {
+    color: #00ff41;
+    border-color: #00ff41;
+    background-color: rgba(0, 255, 65, 0.10);
+}
+
+/* HIBERNATE */
+#hibernate:hover,
+#hibernate:active {
+    color: #00ff41;
+    border-color: #00ff41;
+    background-color: rgba(0, 255, 65, 0.10);
+}
