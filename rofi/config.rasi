@@ -29,7 +29,7 @@
     color4: rgba(0, 255, 65, 0.15);
     color5: #FF0000;
     color6: rgba(255, 0, 0, 0.08);
-    color7: #3F3F3F;
+    color7: #00FF41;
 
     /* Layout + typography */
     border-width: 1px;

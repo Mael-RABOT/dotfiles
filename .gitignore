@@ -9,5 +9,6 @@
 !pulse/**
 !rofi/**
 !sway/**
+!swaylock/**
 
 nvim/plugged/*
