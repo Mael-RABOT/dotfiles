@@ -11,29 +11,31 @@
 */
 
 * {
-    /* Waybar Color Scheme */
-    background:     #2a2a2a;
-    background-alt: #3a3a3a;
-    foreground:     #e0e0e0;
-    border-color:   #87ceeb;
-    accent:         #00ff00;
-    urgent:         #ff6060;
-    warning:        #ffffff;
-    muted:          #808080;
+    /* Base Theme (matches SCSS variables) */
+    background:     #141414;
+    background-alt: rgba(0, 255, 65, 0.10);
+    foreground:     #00ff41;
+    border-color:   #3F3F3F;
+    accent:         #00ff41;
+    urgent:         #FF0000;
+    warning:        #FF0000;
+    muted:          rgba(0, 255, 65, 0.6);
 
-    /* ASCII Art Colors */
-    color0:     #2a2a2a;
-    color1:     #3a3a3a;
-    color2:     #e0e0e0;
-    color3:     #87ceeb;
-    color4:     #00ff00;
-    color5:     #ff6060;
-    color6:     #ffffff;
-    color7:     #808080;
+    /* Extended palette aligned with SCSS */
+    color0: #141414;
+    color1: #3F3F3F;
+    color2: #00ff41;
+    color3: rgba(0, 255, 65, 0.10);
+    color4: rgba(0, 255, 65, 0.15);
+    color5: #FF0000;
+    color6: rgba(255, 0, 0, 0.08);
+    color7: #3F3F3F;
 
-    /* Global Properties */
+    /* Layout + typography */
     border-width: 1px;
-    font: "Courier New 12";
+    border-radius: 3px;
+
+    font: "JetBrainsMono Nerd Font 13";
 }
 
 /* ---- Configuration ---- */
