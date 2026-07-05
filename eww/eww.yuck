@@ -23,6 +23,9 @@
 (defpoll vol :interval "1s"
   "bash ~/.config/eww/scripts/volume.sh")
 
+(defpoll battery :interval "10s"
+  "bash ~/.config/eww/scripts/battery.sh")
+
 ;; =========================
 ;; MAIN BAR
 ;; =========================
@@ -93,6 +96,7 @@
         :onclick "swaymsg 'exec nm-connection-editor'"
         net)
 
+      (label :text battery)
       (label :text mem)
       (label :text gpu)
       (label :text cpu)
