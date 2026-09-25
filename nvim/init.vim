@@ -97,7 +97,8 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set showcmd
-set nowrap
+set wrap
+set linebreak
 set termguicolors
 set mouse=a
 
